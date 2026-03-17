@@ -20,9 +20,15 @@
   --maxw: 1100px;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html, body { padding: 0; margin: 0; }
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
 
 body {
   background:
@@ -34,7 +40,9 @@ body {
   font-family: Arial, sans-serif;
 }
 
-a { color: inherit; }
+a {
+  color: inherit;
+}
 
 .container {
   max-width: var(--maxw);
@@ -42,7 +50,9 @@ a { color: inherit; }
   padding: 0 24px;
 }
 
-.page { padding: 48px 0; }
+.page {
+  padding: 48px 0;
+}
 
 .card {
   background: var(--surface);
@@ -69,7 +79,7 @@ a { color: inherit; }
   pointer-events: none;
 }
 
-.hero > * {
+.hero>* {
   position: relative;
 }
 
@@ -189,9 +199,17 @@ a { color: inherit; }
   border: 2px solid rgba(95, 2, 31, 0.18);
 }
 
-.dotTeal { background: var(--teal); }
-.dotCoral { background: var(--coral); }
-.dotBlue { background: var(--blue); }
+.dotTeal {
+  background: var(--teal);
+}
+
+.dotCoral {
+  background: var(--coral);
+}
+
+.dotBlue {
+  background: var(--blue);
+}
 
 .split {
   margin-top: 14px;
@@ -230,9 +248,17 @@ a { color: inherit; }
 
 /* Responsivo */
 @media (max-width: 900px) {
-  .heroTitle { font-size: 34px; }
-  .grid3 { grid-template-columns: 1fr; }
-  .split { grid-template-columns: 1fr; }
+  .heroTitle {
+    font-size: 34px;
+  }
+
+  .grid3 {
+    grid-template-columns: 1fr;
+  }
+
+  .split {
+    grid-template-columns: 1fr;
+  }
 }
 
 .ipamsIconBtn {
@@ -303,7 +329,7 @@ a[style*="box-shadow: 0 8px 22px"] {
 
 a[style*="box-shadow: 0 8px 22px"]:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.10) !important;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.10) !important;
   background: rgba(236, 231, 208, 0.55) !important;
 }
 
@@ -317,11 +343,9 @@ a[aria-label="YouTube"]:hover {
 
 /* HEADER */
 header {
-  background: linear-gradient(
-    180deg,
-    rgba(30, 79, 214, 0.10),
-    rgba(30, 79, 214, 0.04)
-  );
+  background: linear-gradient(180deg,
+      rgba(30, 79, 214, 0.10),
+      rgba(30, 79, 214, 0.04));
   border-bottom: 1px solid rgba(30, 79, 214, 0.16);
   backdrop-filter: blur(6px);
 }
@@ -347,11 +371,9 @@ header .btnGhost {
 
 /* FOOTER */
 footer {
-  background: linear-gradient(
-    180deg,
-    #0b1b3a,
-    #08142b
-  );
+  background: linear-gradient(180deg,
+      #0b1b3a,
+      #08142b);
   color: rgba(255, 255, 255, 0.88);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
