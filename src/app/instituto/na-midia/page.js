@@ -2,7 +2,10 @@ import NaMidiaTabs from "@/components/NaMidiaTabs";
 
 async function getYoutubeMedia() {
   try {
-    const response = await fetch("http://localhost:3000/api/youtube", {
+    const baseUrl =
+      process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
+    const response = await fetch(`${baseUrl}/api/youtube`, {
       cache: "no-store",
     });
 
