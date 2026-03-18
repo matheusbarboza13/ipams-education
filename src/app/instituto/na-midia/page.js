@@ -1,12 +1,35 @@
-export default function Page() {
+import NaMidiaTabs from "@/components/NaMidiaTabs";
+
+async function getYoutubeMedia() {
+  try {
+    const response = await fetch("http://localhost:3000/api/youtube", {
+      cache: "no-store",
+    });
+
+    if (!response.ok) {
+      return { videos: [], shorts: [], live: [] };
+    }
+
+    return response.json();
+  } catch {
+    return { videos: [], shorts: [], live: [] };
+  }
+}
+
+export default async function Page() {
+  const { videos, shorts, live } = await getYoutubeMedia();
+
   return (
     <div className="container page">
-      <section className="card section">
-        <h1 className="sectionTitle">Na Mídia</h1>
-        <p className="sectionText">
-          Esta seção está em construção. Em breve, conteúdo completo e atualizado.
+      <section className="naMidiaHero">
+        <span className="naMidiaBadge">YouTube</span>
+        <h1 className="naMidiaTitle">Na Mídia</h1>
+        <p className="naMidiaDescription">
+          Acompanhe os conteúdos mais recentes do canal Aprendizagem e Companhia.
         </p>
       </section>
+
+      <NaMidiaTabs videos={videos} shorts={shorts} live={live} />
     </div>
   );
 }
